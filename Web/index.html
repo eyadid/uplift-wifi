@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <title></title>
+    <style>    
+        body{margin:0;padding:40px;background:#000;color:#888;font-family:Arial}
+	    span,a{background:url(map.png) no-repeat;}
+        span{display:inline-block;height:89px;width:71px;margin:0 -15px 0 0 }
+        .s1{background-position:0 0}
+        .s2{background-position:0 -89px}
+        .s3{background-position:0 -178px}
+        .s4{background-position:0 -267px}
+        .s5{background-position:0 -356px}
+        .s6{background-position:0 -445px}
+        .s7{background-position:0 -534px}
+        .s8{background-position:0 -623px}
+        .s9{background-position:0 -712px}
+        .s0{background-position:0 -801px}
+	    .sd{width:30px;height:30px;background-position:50% -977px;position:absolute;top:65px;left:100px}
+	    a{display:inline-block;height:40px;width:71px;margin:0 -65px 24px 60px}
+        a:active{opacity:0.5}
+	    a.u{background-position:0 -891px;}
+	    a.d{background-position:0 -936px;}
+        input{color:#888;border:1px solid #555;padding:3px;background:#000}
+        button{color:#888;border:1px solid #555;padding:3px;background:#222}
+        button:active{background:#FFF;color:#000}
+    </style>
+</head>
+<body>
+    IP: <input type="text" value="" placeholder="Enter IP Address"/> <button onclick="callScript('/st');">Reload</button><br/>
+    <div style="display:none;width:320px;margin:100px auto 0 auto;position:relative;">
+        <div id="display" style="display:inline-block">
+
+        </div>
+        <span class="sd"></span>
+        <a class="u" href="javascript:callScript('/dn');"></a>
+        <a class="d" href="javascript:callScript('/up');"></a>
+    </div>
+</body>
+
+<script>
+if(location.hash){
+  document.getElementsByTagName("input")[0].setAttribute("value", location.hash.replace(/[^0-9\.]/gi,""));
+}
+    function receive(k, v) {
+        if (k == "state") {
+            v = v + "";
+            var p = [];
+            for (var i = 0 ; i < 3; i++)
+                p.push("<span class='s" + v.charAt(i) + "'></span>");
+            document.getElementById("display").innerHTML = p.join("");
+            document.getElementsByTagName("div")[0].style.display = "block";
+        }
+    }
+
+    function callScript(scr) {
+        var d = document.createElement("script");
+        var ip = document.getElementsByTagName("input")[0].getAttribute("value");
+	if(!ip || !ip.length) return;
+	d.setAttribute("src", "http://" + ip + scr);
+        document.body.appendChild(d);
+    }
+
+    setInterval(function () {
+        callScript("/st");
+    }, 2500);
+
+	receive("state","000");
+</script>
+
+</html>
