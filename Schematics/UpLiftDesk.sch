@@ -5114,27 +5114,40 @@ In this library the device names are the same as the pin names of the symbols, t
 </library>
 <library name="ESP8266">
 <packages>
-<package name="ESP-12">
-<smd name="TX" x="8" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="RX" x="10" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO4" x="12" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO2" x="18" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO5" x="14" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO0" x="16" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO15" x="20" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GND" x="22" y="14" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="REST" x="8" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="ADC" x="10" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="CH_PD" x="12" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO16" x="14" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO14" x="16" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO12" x="18" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="GPIO13" x="20" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="VCC" x="22" y="-2" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<wire x1="24" y1="-2" x2="24" y2="14" width="0.127" layer="21"/>
-<wire x1="24" y1="14" x2="0" y2="14" width="0.127" layer="21"/>
-<wire x1="0" y1="14" x2="0" y2="-2" width="0.127" layer="21"/>
-<wire x1="0" y1="-2" x2="24" y2="-2" width="0.127" layer="21"/>
+<package name="ESP-12-THROUGH">
+<wire x1="0" y1="8" x2="-25" y2="8" width="0.127" layer="21"/>
+<wire x1="-25" y1="8" x2="-25" y2="-8" width="0.127" layer="21"/>
+<wire x1="-25" y1="-8" x2="0" y2="-8" width="0.127" layer="21"/>
+<wire x1="0" y1="-8" x2="0" y2="8" width="0.127" layer="21"/>
+<pad name="VCC" x="-1.6464" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO13" x="-3.2928" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO12" x="-4.9392" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO14" x="-6.5856" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO16" x="-8.232" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="CH_PD" x="-9.8784" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="ADC" x="-11.5248" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="REST" x="-13.1712" y="7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GND" x="-1.6464" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO15" x="-3.2928" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO2" x="-4.9392" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO0" x="-6.5856" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO5" x="-8.232" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="GPIO4" x="-9.8784" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="RX" x="-11.5248" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<pad name="TX" x="-13.1712" y="-7.7" drill="0.5" diameter="0.8128" shape="long" rot="R90"/>
+<wire x1="-20" y1="-6" x2="-24" y2="-6" width="0.6096" layer="21"/>
+<wire x1="-24" y1="-6" x2="-24" y2="-4" width="0.6096" layer="21"/>
+<wire x1="-24" y1="-4" x2="-20" y2="-4" width="0.6096" layer="21"/>
+<wire x1="-20" y1="-4" x2="-20" y2="-2" width="0.6096" layer="21"/>
+<wire x1="-20" y1="-2" x2="-24" y2="-2" width="0.6096" layer="21"/>
+<wire x1="-24" y1="-2" x2="-24" y2="0" width="0.6096" layer="21"/>
+<wire x1="-24" y1="0" x2="-20" y2="0" width="0.6096" layer="21"/>
+<wire x1="-20" y1="0" x2="-20" y2="2" width="0.6096" layer="21"/>
+<wire x1="-20" y1="2" x2="-24" y2="2" width="0.6096" layer="21"/>
+<wire x1="-24" y1="2" x2="-24" y2="4" width="0.6096" layer="21"/>
+<wire x1="-24" y1="4" x2="-20" y2="4" width="0.6096" layer="21"/>
+<wire x1="-20" y1="4" x2="-20" y2="6" width="0.6096" layer="21"/>
+<wire x1="-20" y1="6" x2="-24" y2="6" width="0.6096" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -5163,12 +5176,12 @@ In this library the device names are the same as the pin names of the symbols, t
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ESP-12">
+<deviceset name="ESP-12-THROUGH">
 <gates>
 <gate name="G$1" symbol="ESP-12" x="7.62" y="22.86"/>
 </gates>
 <devices>
-<device name="" package="ESP-12">
+<device name="" package="ESP-12-THROUGH">
 <connects>
 <connect gate="G$1" pin="ADC" pad="ADC"/>
 <connect gate="G$1" pin="CH_PD" pad="CH_PD"/>
@@ -6469,14 +6482,12 @@ naming: grid - package width</description>
 <part name="R6" library="resistor" deviceset="R-US_" device="0204/7" value="1k"/>
 <part name="ESP-FLASH" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
-<part name="U$1" library="ESP8266" deviceset="ESP-12" device=""/>
 <part name="IC1" library="v-reg" deviceset="LM317TS" device=""/>
 <part name="C1" library="capacitor-wima" deviceset="C" device="2.5/2" value="0.1uf"/>
 <part name="C2" library="capacitor-wima" deviceset="C" device="2.5/2" value="1uf"/>
 <part name="R7" library="resistor" deviceset="R-US_" device="0204/7" value="1k"/>
 <part name="R8" library="resistor" deviceset="R-US_" device="0204/7" value="680"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
-<part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X1" device=""/>
@@ -6500,6 +6511,8 @@ naming: grid - package width</description>
 <part name="JP18" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="JP20" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
+<part name="U$2" library="ESP8266" deviceset="ESP-12-THROUGH" device=""/>
+<part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6522,14 +6535,12 @@ naming: grid - package width</description>
 <instance part="R6" gate="G$1" x="106.68" y="48.26"/>
 <instance part="ESP-FLASH" gate="G$1" x="127" y="142.24" rot="R90"/>
 <instance part="SUPPLY6" gate="GND" x="124.46" y="111.76"/>
-<instance part="U$1" gate="G$1" x="198.12" y="116.84"/>
 <instance part="IC1" gate="1" x="208.28" y="20.32"/>
 <instance part="C1" gate="G$1" x="195.58" y="5.08"/>
 <instance part="C2" gate="G$1" x="226.06" y="5.08"/>
 <instance part="R7" gate="G$1" x="208.28" y="-2.54" rot="R270"/>
 <instance part="R8" gate="G$1" x="218.44" y="12.7" rot="R270"/>
 <instance part="SUPPLY9" gate="GND" x="208.28" y="-20.32"/>
-<instance part="SUPPLY10" gate="GND" x="231.14" y="93.98"/>
 <instance part="JP1" gate="G$1" x="101.6" y="2.54" rot="R90"/>
 <instance part="JP2" gate="G$1" x="109.22" y="2.54" rot="R90"/>
 <instance part="JP3" gate="G$1" x="116.84" y="2.54" rot="R90"/>
@@ -6553,6 +6564,8 @@ naming: grid - package width</description>
 <instance part="JP18" gate="G$1" x="7.62" y="43.18" rot="R90"/>
 <instance part="JP20" gate="G$1" x="0" y="43.18" rot="R90"/>
 <instance part="SUPPLY8" gate="GND" x="0" y="22.86"/>
+<instance part="U$2" gate="G$1" x="307.34" y="114.3"/>
+<instance part="SUPPLY1" gate="GND" x="337.82" y="83.82"/>
 </instances>
 <busses>
 </busses>
@@ -6576,11 +6589,6 @@ naming: grid - package width</description>
 </net>
 <net name="ESP-TX" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="TX"/>
-<wire x1="218.44" y1="134.62" x2="233.68" y2="134.62" width="0.1524" layer="91"/>
-<label x="233.68" y="134.62" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="0" x2="101.6" y2="-12.7" width="0.1524" layer="91"/>
 <label x="101.6" y="-12.7" size="1.778" layer="95" rot="R270" xref="yes"/>
@@ -6589,6 +6597,11 @@ naming: grid - package width</description>
 <pinref part="JP18" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="40.64" x2="7.62" y2="27.94" width="0.1524" layer="91"/>
 <label x="7.62" y="27.94" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="TX"/>
+<wire x1="327.66" y1="132.08" x2="340.36" y2="132.08" width="0.1524" layer="91"/>
+<label x="340.36" y="132.08" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -6660,15 +6673,6 @@ naming: grid - package width</description>
 <pinref part="SUPPLY9" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SUPPLY10" gate="GND" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="GND"/>
-<wire x1="218.44" y1="99.06" x2="231.14" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GPIO15"/>
-<wire x1="218.44" y1="104.14" x2="231.14" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="104.14" x2="231.14" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="99.06" x2="231.14" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="JP8" gate="G$1" pin="1"/>
 <wire x1="154.94" y1="0" x2="154.94" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="SUPPLY11" gate="GND" pin="GND"/>
@@ -6683,6 +6687,15 @@ naming: grid - package width</description>
 <wire x1="0" y1="40.64" x2="0" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="GND" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GPIO15"/>
+<wire x1="327.66" y1="101.6" x2="337.82" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="337.82" y1="101.6" x2="337.82" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="337.82" y1="96.52" x2="337.82" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="327.66" y1="96.52" x2="337.82" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="ESP-RX" class="0">
 <segment>
@@ -6694,9 +6707,9 @@ naming: grid - package width</description>
 <label x="149.86" y="63.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="RX"/>
-<wire x1="218.44" y1="129.54" x2="231.14" y2="129.54" width="0.1524" layer="91"/>
-<label x="231.14" y="129.54" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="RX"/>
+<wire x1="327.66" y1="127" x2="340.36" y2="127" width="0.1524" layer="91"/>
+<label x="340.36" y="127" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -6717,14 +6730,14 @@ naming: grid - package width</description>
 <label x="238.76" y="20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="185.42" y1="99.06" x2="175.26" y2="99.06" width="0.1524" layer="91"/>
-<label x="175.26" y="99.06" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="CH_PD"/>
+<wire x1="294.64" y1="121.92" x2="281.94" y2="121.92" width="0.1524" layer="91"/>
+<label x="281.94" y="121.92" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="CH_PD"/>
-<wire x1="185.42" y1="124.46" x2="177.8" y2="124.46" width="0.1524" layer="91"/>
-<label x="177.8" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="VCC"/>
+<wire x1="294.64" y1="96.52" x2="281.94" y2="96.52" width="0.1524" layer="91"/>
+<label x="281.94" y="96.52" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -6782,9 +6795,9 @@ naming: grid - package width</description>
 <label x="12.7" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO12"/>
-<wire x1="185.42" y1="109.22" x2="175.26" y2="109.22" width="0.1524" layer="91"/>
-<label x="175.26" y="109.22" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="GPIO12"/>
+<wire x1="294.64" y1="106.68" x2="276.86" y2="106.68" width="0.1524" layer="91"/>
+<label x="276.86" y="106.68" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="UL-UP" class="0">
@@ -6818,9 +6831,9 @@ naming: grid - package width</description>
 <label x="12.7" y="111.76" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO13"/>
-<wire x1="185.42" y1="104.14" x2="154.94" y2="104.14" width="0.1524" layer="91"/>
-<label x="154.94" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="GPIO13"/>
+<wire x1="294.64" y1="101.6" x2="271.78" y2="101.6" width="0.1524" layer="91"/>
+<label x="271.78" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="ESP-GPIO0" class="0">
@@ -6830,9 +6843,9 @@ naming: grid - package width</description>
 <label x="127" y="132.08" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO0"/>
-<wire x1="218.44" y1="114.3" x2="228.6" y2="114.3" width="0.1524" layer="91"/>
-<label x="228.6" y="114.3" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="GPIO0"/>
+<wire x1="327.66" y1="111.76" x2="340.36" y2="111.76" width="0.1524" layer="91"/>
+<label x="340.36" y="111.76" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="UL-M" class="0">
